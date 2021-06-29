@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automatic Room Temperature Controller</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <style>
+        .navbar{
+            background-color: rgb(91, 14, 143);
+            font-size: 183%;
+            border-radius: 14px;
+            height: 120px;     
+            text-align: center;
+            font-style: italic;
+            font-family: 'Lobster', cursive;
+            }
+            .navbar ul{
+                margin: auto;
+                padding-top: 10px;
+                background: rgb(59, 204, 71);
+            }
+            .navbar li{
+                list-style: none;
+                float: left; 
+                position: relative;
+                left: 600px;
+
+            }
+            .navbar li a{
+                color: rgb(0, 0, 0);
+                text-decoration: none;
+                padding: 10px 35px;
+                padding-bottom: 5px;
+                background: rgb(45, 179, 101);
+            }
+            .hover{
+                background-color: rgb(52, 0, 240);
+               
+            }
+            #logo{
+                position: relative;
+                top: -120px;
+            }
+            .search input{
+                width: 30vw;
+                height: 27px;
+                border-radius: 6px;
+                margin: 0 26px 0 56px;
+                padding: 0 12px;
+                position: relative;
+                top: -170px;
+                left: 620px;
+            }
+
+            .search{
+                display: flex;
+                align-items: center;
+            }
+
+            .search button{
+                font-family: 'Lobster', cursive;
+                font-weight: bold;
+                position: relative;
+                top: -170px;
+                left: 620px;
+                font-size: 20px;
+            }
+            .img2{
+                position: relative;
+                top: -145px;
+                margin: 5px;
+                padding-left: 25px;
+            }
+            .img3{
+                padding-left: 25px;
+                position: relative;
+                top: -100px;
+            }
+            .marquee{
+                text-align: center;
+                background-color: rgb(121, 57, 4);
+                position: relative;
+                top: -80px;
+                font-family: 'Lobster', cursive;
+                border-radius: 155px;
+                font-size: 100px;
+                color: rgb(119, 206, 68);
+            }
+            .bestselling{
+                font-family: 'Lobster', cursive;
+                text-align: center;
+                font-size: 80px;
+                position: relative;
+                top: -50px;
+            background-color: rgb(176, 115, 226);
+            border-radius: 200px;
+            }
+            .card-item{
+                display: inline-flex;
+                justify-content: center;
+                flex-direction: column;
+                width: 10vw;
+                margin: 0px 24px;
+                background-color: rgb(105, 156, 197);
+            }
+            .text-center{
+                font-family: 'Lobster', cursive;
+                font-size: 29px;
+            }
+                    .items{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+                align-items: center;
+                flex-wrap: wrap;
+                background: rgb(72, 214, 91);
+            }
+            .item{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                border: 2px solid #90af21;
+                width: 300px;
+                padding: 5px;
+                margin: 5px;
+                position: relative;
+                top: 50px;
+            }
+            .apparels{
+                font-family: 'Lobster', cursive;
+                text-align: center;
+                font-size: 80px;
+                position: relative;
+                top: 20px;
+            background-color: aqua;
+            border-radius: 900px;
+            }
+            #img4{
+                position: relative;
+                left: 32%;
+                top: 50px;
+                border-radius: 120px;
+            }
+            .img-item{
+        width: 40%;
+      }
+      .btn-primary {
+    color: #fff;
+    background-color: #b3c93b;
+    border-color: #e60e0e;
+    font-weight: bold;
+    font-family: 'Lobster', cursive;
+    text-align: center;           
+    border-radius: 200px;
+    }
+    .btn {
+        display: inline-block;
+        font-weight: 400;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+        border: 1px solid transparent;
+        padding: .375rem .75rem;
+        font-size: 1rem;
+        line-height: 1.5;
+        border-radius: .25rem;
+        transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    }
+    .table{
+    text-align: center;
+    font-size: 100px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    position: relative;
+    top: 70px;    
+    color: rgb(12, 8, 8);
+    padding-bottom: 20px;
+    background-color: rgb(42, 206, 78);
+    border-radius: 40px;
+    }
+  
+    #img6{
+        position: relative;
+        width: fit-content;
+        height: min-content;
+        top: 100px;
+        left: 40px;
+        border-radius: 200px;
+    }
+    .form{
+        border: solid 4px rgb(182, 42, 42);
+        background-color: #3ea1be;
+        position: relative;
+        }
+        .form1{
+        border: solid 4px rgb(182, 42, 42);
+        background-color: #96b9c4;
+        position: relative;
+        }
+        footer{
+                text-align: center;
+                font-size: 35px;
+                padding: 20px;
+                background-color: rgb(129, 151, 28);
+                color: black;
+                font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                border: 20px;
+                position: relative;
+                bottom: -55px;
+                border-radius: 30px;
+                margin-bottom: 5px;
+           }
+           footer a{
+               text-decoration: none;
+               color: rgb(228, 46, 46);
+           }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <nav>
+                <ul>
+                    <li><a href="#" class="ul3">Home</a></li>
+                    <li><a href="#" class="ul3">Login</a></li>
+                    <li><a href="#" class="ul3">Sign Up</a></li>
+                    <li><a href="#" class="ul3">Build your own product</a></li>
+                    <li><a href="#" class="ul3">Feedback</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div>
+            <img src="logo1.jpg" alt="Not available" width="20%" id="logo">
+        </div>
+        <di class="search">
+            <input type="text" name="" id="" placeholder="Search this website">
+            <button class="btn">Search</button>
+            <h1>AUTOMATIC ROOM TEMPERATURE CONTROLLER </h1>
+        
+        </div>
+    </header>
+    <div class="img2">
+        <BR>
+        <BR>
+        <BR>
+        <BR>
+            <BR>
+        </BR></BR></BR></BR></BR>
+        <h2>1.Circuit</h2>
+        <img src="circuit.png" alt="NA" width="80%" >
+    </div>
+    <div class="form1">
+    <h2>2.Equipments Required</h2>
+    <p>DC Motor <img src="dcmotor.jpeg" width="10%">,
+        NPN Transistor <img src="npn.jpeg" width="10%">, Zener  Diode <img src="zener.jpeg" width="10%">, Arduino Uno <img src="uno.jpeg" width="10%">
+        , LCD <img src="lcd.jpeg" width="10%">, Temperature Sensor <img src="sensor.jpg" width="10%">, <br>
+        <br><br>   Potentiometer, LED, Resistor, Wires, Breadboard </p>
+</div>
+    <div class="form">
+        <h2>3.Code</h2>
+    <p> const int temp_trans_pin = A0, AirCooler_pin = 8, FAN_pin = 6;<br>
+        /*FAN_pin: here I used DC motor in stead of FAN because <br>
+         I couldn't find the symbol for it. Similarly,for the  <br>
+          Heater (Heater_pin), I used <LED class=""></LED>
+          <br>
+       <br>
+       // Set the range of the desired temperature <br>
+       <br>
+          float MinTemp = 20, MaxTemp = 25;/*Room temperature is [20,25] degree C */ <br>
+       <br>
+       // Include the LCD library code <br>
+       <br>
+         #include <LiquidCrystal.h> <br>
+       <br>
+        // Initialize the library with the numbers of the interface pins <br>
+          <br>
+         LiquidCrystal LCD(12, 11, 5, 4, 3, 2); <br>
+       <br>
+         void setup() { <br>
+         <br>
+         // System initialization <br>  
+           <br>
+           LCD.begin(16, 2); <br>
+           pinMode(AirCooler_pin, OUTPUT);//LED in our case <br>
+           pinMode(FAN_pin, OUTPUT); <br>
+           <br>
+         // Display the desired range of temperature <br>
+           <br>
+           LCD.print("Room temp(C):"); <br>
+           LCD.setCursor(2,1); <br>
+           LCD.print(MinTemp); LCD.print("-");LCD.print(MaxTemp); <br>
+           <br>
+           delay(2000); <br>
+        } <br>
+       <br>
+        void loop() { <br>
+          <br>
+          float Eqv_volt, SensorTemp; <br>
+        <br>
+        // Read voltage and convert to temperature (Celsius) <br>
+          <br>
+          Eqv_volt = analogRead(temp_trans_pin) * 5.0 / 1023; <br>
+          SensorTemp = 100.0 * Eqv_volt-50.0; <br>
+       
+           <br><br>
+         // Display the sensor reading <br>
+          <br>
+           LCD.clear(); <br>
+           LCD.print("Sensor reading:"); <br>
+           LCD.setCursor(2,1); <br>
+           LCD.print(SensorTemp); LCD.print(" C"); <br>
+          <br>
+           delay(2000); <br>
+         <br>
+        /*Compare the sensor reading with the range of <br>
+         acceptable temperatures*/ <br>
+         <br>
+          if(SensorTemp > MaxTemp){ <br>
+             LCD.clear(); <br>
+             LCD.print("temp is HIGHER!");//higher than the max <br>
+            <br>
+             /*Turn on FAN (dc motor)! to regulate the temp. <br>
+              Increase FAN speed at a slow rate*/ <br>
+            <br>
+             LCD.setCursor(0, 1);LCD.print("Turn on FAN!"); <br>
+             for( int i = 0; i <= 255; i++ ) { <br>
+               analogWrite(FAN_pin, i); <br>
+               digitalWrite(AirCooler_pin, HIGH); <br>
+              } <br>
+              delay(2000); <br>
+              }<br>
+       <br>
+         else if(SensorTemp > MinTemp && SensorTemp < MaxTemp){/*Now temperature is perfect. <br>
+              That is,it is in the desired range. Hence no need of changes!!*/ <br>
+             LCD.clear(); <br>
+             LCD.print("Temp is NORMAL!");LCD.setCursor(2,1); <br>
+             LCD.print("Turn off all!"); <br>
+            for( int i = 0; i <= 0; i++ ) { <br>
+               analogWrite(FAN_pin, i); <br>
+               digitalWrite(AirCooler_pin, LOW); <br>
+              } <br>
+             delay(1000); <br>
+          } <br>
+         else { <br>
+             LCD.clear(); <br>
+             LCD.print("temp is low"); <br>
+             LCD.setCursor(0, 1);LCD.print("start the Heater"); <br>
+           for( int i = 0; i <= 255; i++ ) { <br>
+               analogWrite(FAN_pin, i); <br>
+               digitalWrite(AirCooler_pin, HIGH); <br>
+              } <br>
+           } <br>
+           delay(1000); <br>
+          }   <br>
+       </p>
+    </div>
+    <div class="form1">
+       <h2>4.Working</h2>
+       <p>1.As you can see in the above code that we have set the limit of Normal Temperature from 20 degree Celcius to 25 degree Celcius. <br> In this Range the Arduiono Uno Board does not provide any current so all the fans and heater are switched off. <br>
+           <br>2.If Temperature Exceeds 25 degree Celcius, the Arduiono Uno automatically start the fan or AC whatever you wanted to coonect. <br> It lowers the Room temperature untill it comes to Normal Range, then the fans automatically switched off. <br>
+           <br>3.If the Temperature becomes less than 20 degree Celcius, the Arduiono Uno starts the Heater. <br>It increase the Temperature to Normal Range then the Heater automaticaly turned off.
+       </p>
+    </div>
+       <div class="form">
+       <h2>Benefits</h2>
+       <p>
+        These days, almost all newly build houses are equipped with home automation systems.  With the developments in the field of technology,<br>
+        these home automation systems have become very efficient. Each system has a processor that does the data processing and now these systems <br>
+        use exceptionally powerful processors and hence they are capable of performing a lot of different functions efficiently. also there are  <br>
+         numerous sites like HDHtech.com that can sell you quality automation systems.
+        <br> <br>
+        When we speak of home automation systems, <br>
+        there are numerous types of such systems. And one popular one is the automatic temperature control system. <br>
+        There are numerous advantages for installing an automatic temperature control system. <br>
+         In fact an automatic temperature control system is a circuit that can control the functioning of the air conditioner and thereby controls the temperature of the room. <br>
+          Some advantages of having an automatic temperature control installed in your house are:
+       </p>
+       <h3>(i)Wireless Technology:</h3>
+       <p>
+        These days, advancements in the field of technology and also the <br>
+         high speed of internet, have made it possible for the residents to <br> 
+         control the home appliances from their smart phones or laptops. <br> 
+         Hence in the case of air conditioning, you can make sure that the <br> 
+         room is at the right temperature when to reach the house by <br> 
+         switching on the air conditioner while you are on the way. The AC <br> 
+         is tethered on to the internet via WIFI and it can take commands <br> 
+         from you no matter where you are. <br>
+       </p>
+       <h3>(ii)Energy Savings</h3>
+       <p>
+        The temperature of the room changes when there is heat exchange between the room and the outside environment. <br>
+        An automatic temperature control system can connected to motorized shades of the windows and hence the shades <br>
+         can be closed when the heat begins to escape the room and this can be done automatically. <br>
+         <br>
+        Also during the day time, people would love to be in a cool environment and at night they would like to sleep in warm conditions. <br>
+         Hence the automatic temperature control system can make sure that the right temperature is maintained by keeping these in its memory.
+       </p>
+    </div>
+      <div class="table">
+        <h2><p align="center">Our Founder</p></h2>
+        <p><img src="parvej1.jpg" alt="Parvej Ali(2020KUEC2067)" width="30%"></p>
+        <h3><p>Parvej Ali <br>(2020KUEC2067)</p></h3>
+        <p align="center"> <a href="http://www.instagram.com/parvejali11"  >Instagram  &nbsp;&nbsp;&nbsp;&nbsp;</a>
+            <a href="http://www.gmail.com/2020kuec2067@iiitkota.ac.in">Gmail&nbsp;&nbsp;&nbsp;&nbsp;</a>
+            <a href="https://www.linkedin.com/in/parvej-ali-936256207">Linkedin&nbsp;&nbsp;&nbsp;&nbsp;</a></p>
+        <p><img src="Aniket.jpg" alt="This is Aniket Singh" width="30%"></p>
+        <h3><p>Aniket Singh <br>(2020KUEC2070)</p></h3>
+        <p><img src="Rahul.jpeg" alt="This is Rahul Kumar" width="30%"></p>
+        <h3><p>Rahul Kumar <br>(2020KUEC2069)</p></h3>
+        <p><img src="Shivang.jpeg" alt="This is Shivang" width="30%"></p>
+        <h3><p>Shivang Arya <br>(2020KUEC2065)</p></h3>
+        <p><img src="praveen.jpg" alt="This is Praveen Kumar" width="30%"></p>
+        <h3><p>Praveen Kumar <br>(2020KUEC2068)</p></h3>
+    <footer>
+        <a href="#">FAQs |</a> 
+        <a href="#">Privacy Policy |</a> 
+        <a href="#">Contact us |</a>
+       Copyright &copy;-2021 All Rights Reserved to Team Ception
+    </footer>
+</body>
+</html>
